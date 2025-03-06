@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmployeeSurname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -101,6 +101,7 @@
             this.btnCreate.TabIndex = 45;
             this.btnCreate.Text = "Ekle";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnList
             // 
@@ -150,13 +151,13 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Personel Soyadı:";
             // 
-            // txtCustomerName
+            // txtEmployeeName
             // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtCustomerName.Location = new System.Drawing.Point(140, 71);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(180, 27);
-            this.txtCustomerName.TabIndex = 39;
+            this.txtEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEmployeeName.Location = new System.Drawing.Point(140, 71);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(180, 27);
+            this.txtEmployeeName.TabIndex = 39;
             // 
             // label2
             // 
@@ -222,12 +223,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEmployeeSurname);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCustomerName);
+            this.Controls.Add(this.txtEmployeeName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmployeeId);
             this.Controls.Add(this.label1);
             this.Name = "FrmEmployee";
             this.Text = "FrmEmployee";
+            this.Load += new System.EventHandler(this.FrmEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -246,7 +248,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmployeeSurname;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmployeeId;
         private System.Windows.Forms.Label label1;
